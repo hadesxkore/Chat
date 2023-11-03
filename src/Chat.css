@@ -1,0 +1,211 @@
+/* Chat.css */
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #ffecb5; /* Warm beige background */
+    
+  }
+  .message-reactions {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.message-reaction {
+  margin-right: 8px;
+  cursor: pointer;
+}
+
+  .chat-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #f8d7a1; /* Light coffee cream color */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 1000px;
+    height: 80%;
+    overflow-y: auto; /* Add a vertical scrollbar when needed */
+    word-wrap: break-word; /* Wrap long words to the next line */
+    white-space: pre-wrap; /* Preserve newlines and spaces */
+  }
+  
+  .message {
+    background: #a67c56; /* Coffee bean brown */
+    color: #fff; /* White text color */
+    border-radius: 16px;
+    padding: 12px;
+    margin: 8px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    font-size: 16px;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .message:hover .delete-button {
+    display: block;
+  }
+  
+  .delete-button {
+    display: none;
+    background: #f44336; /* Red background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 16px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Show the delete button when hovering or focusing on the message */
+  .message:hover .delete-button,
+  .message:focus .delete-button {
+    display: block;
+  }
+  
+  .delete-button:hover {
+    background: #d32f2f; /* Darker red on hover */
+  }
+  
+  .recipient-name {
+    font-weight: bold;
+    color: #333;
+    margin-right: 8px;
+  }
+  
+  .user {
+    align-self: flex-end;
+    background: #8d5837; /* Cinnamon brown */
+  }
+  
+  .recipient {
+    align-self: flex-start;
+    background: #75523d; /* Coffee cream brown */
+  }
+  
+  .input-container {
+    display: flex;
+    width: 80%;
+    max-width: 500px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+  }
+  
+  .message-input {
+    flex-grow: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 16px;
+    background: #f8d7a1; /* Light coffee cream color */
+    color: #333; /* Dark text color */
+    font-size: 16px;
+  }
+  
+  .send-button {
+    background: #c19a6b; /* Coffee bean brown */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 16px;
+    padding: 12px 20px;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background: #a45734; /* Cinnamon brown on hover */
+  }
+  
+/* Chat.css */
+.chat-container {
+    /* ... (unchanged styles) */
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .chat-box {
+    /* ... (unchanged styles) */
+    transition: background 0.3s ease-in-out;
+    animation: fadeIn 0.6s ease-in-out;
+  }
+  
+  .message {
+    /* ... (unchanged styles) */
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  .user {
+    /* ... (unchanged styles) */
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  .recipient {
+    /* ... (unchanged styles) */
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  .input-container {
+    /* ... (unchanged styles) */
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .message-input {
+    /* ... (unchanged styles) */
+    transition: background 0.3s ease-in-out;
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  .send-button {
+    /* ... (unchanged styles) */
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .send-button:hover {
+    background: #a45734; /* Cinnamon brown on hover */
+  }
+  
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateX(-10%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+/* Chat.css */
+
+/* Define a custom scrollbar style for WebKit browsers (Chrome, Safari) */
+.chat-container::-webkit-scrollbar {
+    width: 12px; /* Set the width of the scrollbar */
+  }
+  
+  .chat-container::-webkit-scrollbar-thumb {
+    background: #a45734; /* Set the color of the scrollbar thumb (the draggable part) */
+    border-radius: 6px; /* Round the scrollbar thumb */
+  }
+  
+  .chat-container::-webkit-scrollbar-track {
+    background: #fff; /* Set the color of the scrollbar track (the non-draggable part) */
+  }
+  
+  /* Define a custom scrollbar style for Firefox */
+  .chat-container {
+    scrollbar-width: thin; /* Set the width of the scrollbar */
+    scrollbar-color: #a45734 #fff; /* Set the color of the scrollbar thumb and track */
+  }
+      
